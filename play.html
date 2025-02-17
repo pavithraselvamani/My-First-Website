@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<head>
+    <title>game</title>
+</head>
+<body style="background-color: black;color: white;">
+    <center>
+        <h1 style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman;font-style:italic">Guess the number</h1>
+    
+<input id="input">
+<button onClick="update()">click</button>
+<h3 id="two">Right/Wrong</h3>
+    </center>   
+</body>
+</html>
+<script>
+    var a=document.getElementById("input")
+    var b=document.getElementById("two")
+    var randomNumber=Math.floor(Math.random()*10)+1
+    function update(){
+        var guessnumber=Number(a.value)
+        if(randomNumber==guessnumber)
+        {
+            console.log("right")
+            b.textContent="right"
+            alert("you won")
+        } 
+        else{
+            console.log("wrong")
+            b.textContent="wrong"
+            alert("you lose")
+        }  
+
+        
+
+
+    }
+</script>
