@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<head>
+    <title>game</title>
+    <style>
+        div{
+            width:450px;
+            height:350px;
+            background:rgba(218, 161, 6, 0.1);
+            backdrop-filter: blur(5px);
+            color:antiquewhite;
+            border-radius:50px;
+            box-shadow: 0px 0px 16px0px rgba(0,0,0,0.5);
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 7%;           
+        }
+    </style>
+</head>
+<body style="
+  background-image: url('https://images.pexels.com/photos/30781075/pexels-photo-30781075/free-photo-of-sunlit-historical-building-facade-at-dusk.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  background-color: black;
+  color: white;
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+">
+<div>
+    <center>
+        <h1 style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman;font-style:italic">Guess the number</h1>
+  
+<input id="input">
+<button onClick="update()">click</button>
+<h3 id="two">Right/Wrong</h3>
+    </center>
+</div>   
+</body>
+</html>
+<script>
+    var a=document.getElementById("input")
+    var b=document.getElementById("two")
+    var randomNumber=Math.floor(Math.random()*10)+1
+    function update(){
+        var guessnumber=Number(a.value)
+        if(randomNumber==guessnumber)
+        {
+            console.log("right")
+            b.textContent="right"
+            alert("you won")
+        } 
+        else{
+            console.log("wrong")
+            b.textContent="wrong"
+            alert("you lose")
+        }  
+
+        
+
+
+    }
+</script>
