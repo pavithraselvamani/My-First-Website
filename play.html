@@ -13,8 +13,30 @@
             display:flex;
             justify-content: center;
             align-items: center;
-            margin-top: 7%;           
+            margin-top: 10%;           
         }
+        .popup{
+            
+            position:absolute;
+            opacity:0.5;
+            z-index: 1;
+            display:none;
+        
+        }
+        .pav{
+            top:0px;
+            width:50%;
+            position: absolute;
+            background-color: aliceblue;
+            color: black;
+            z-index: 3;
+            padding:10px;
+            border-radius: 10px;
+            left:105%;
+            display: none;
+            height:250px;
+        }
+
     </style>
 </head>
 <body style="
@@ -38,8 +60,23 @@
 <input id="input">
 <button onClick="update()">click</button>
 <h3 id="two">Right/Wrong</h3>
+
+    
+    <button onClick="play()">How to play this game</button>
+<div class="popup"></div>
+
+<div class="pav">
+    <p>Enter a number between 1 and 10 in the input box.
+        Click the button to check if your guess is correct.
+        If your guess matches the randomly generated number, a message will appear saying "You won!"
+        If your guess is incorrect, a message will appear saying "You lose!", and you can try again.
+        Keep guessing until you win! 🎉</p>
+        <button onClick="xxx()">close</button>
     </center>
-</div>   
+</div>
+</div> 
+
+ 
 </body>
 </html>
 <script>
@@ -64,4 +101,15 @@
 
 
     }
+    var popup=document.querySelector(".popup");
+    var pavi=document.querySelector(".pav");
+    function play(){
+        popup.style.display="block";
+        pavi.style.display="block";
+    }
+    function xxx(){
+        popup.style.display="none";
+        pavi.style.display="none";
+    }
+    
 </script>

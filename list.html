@@ -13,6 +13,27 @@
         border-color:beige;
         color:rgb(13, 121, 121);
           }
+    .first{
+        position:absolute;
+        z-index: 1;
+        display:none;
+        height:0px;width:0px;
+        opacity:0.8;
+    }
+    .second{
+        z-index:3;
+        background-color: aliceblue;
+        color: black;
+        height:150px;width:250px;
+        border-radius: 10px;
+        display:none;
+        top:200px;
+        position: absolute;
+        left:69%;
+        
+
+        
+    }
 </style>
 </head>
 <body style="background-image: url('https://images.pexels.com/photos/1557251/pexels-photo-1557251.jpeg?w=1920&h=1080&fit=crop');
@@ -35,17 +56,23 @@ align-items:center"
 <ul id="list-con">
     <li>hello
     <button onClick="xxx(event)">delete</button>
-    </li>
-    
-</ul>
-      
-</div> 
+    </li>   
+</ul>  
 </center>
-</body>
-</html>
-</script>
 
-    <script>
+</div>
+
+<button onClick="popup()">How to Use the Task List</button>
+<div class="first"></div>
+<div class="second">
+    <p>
+Enter a task in the input box and click the 'Add' button to add it to the list. To remove a task, click the 'Delete' button next to it.</p>
+
+<button onclick="vj()">close</button></div> 
+
+
+
+<script>
         var a=document.getElementById("list-con")//select ul because text ul kula dha store aganum
         var c=document.getElementById("input")
     function update(){
@@ -58,4 +85,18 @@ align-items:center"
     {
         event.target.parentElement.remove()
     }
-    </script>
+    var pavi=document.querySelector(".first")
+    var pavithra=document.querySelector(".second")
+    function popup(){
+        pavi.style.display="block"
+        pavithra.style.display="block"
+    }
+    function vj(){
+        pavi.style.display="none"
+        pavithra.style.display="none"
+
+    }
+
+</script>
+</body>
+</html>
